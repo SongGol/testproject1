@@ -1,6 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutHome"
+        android:layout_width="409dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewHome"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutHome">
+
+        <LinearLayout
+            android:id="@+id/horizontalScrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:orientation="horizontal"
+                app:columnCount="7"
+                app:rowCount="2" >
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    app:layout_column="0"
+                    app:layout_row="0"
+                    />
+
+                <Button
+                    android:id="@+id/kauHome"
+                    android:layout_width="57dp"
+                    android:layout_height="61dp"
+                    android:text="KAU"
+                    app:layout_column="1"
+                    app:layout_row="0" />
+                <Button
+                    android:id="@+id/kauStudy"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Study"
+                    app:layout_column="2"
+                    app:layout_row="0"
+                    />
+                <Button
+                    android:id="@+id/kauNotice"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Notice"
+                    app:layout_column="3"
+                    app:layout_row="0"
+                    />
+                <Button
+                    android:id="@+id/kauCalender"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Cal"
+                    app:layout_column="4"
+                    app:layout_row="0"
+                    />
+
+                <Button
+                    android:id="@+id/kauLibrary"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Lib"
+                    app:layout_column="5"
+                    app:layout_row="0"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    app:layout_column="6"
+                    app:layout_row="0"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    app:layout_column="0"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Homepage"
+                    android:textSize="19dp"
+                    app:layout_column="1"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="StudyRoom"
+                    android:textSize="19dp"
+                    app:layout_column="2"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Notice"
+                    android:textSize="19dp"
+                    app:layout_column="3"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Calender"
+                    android:textSize="19dp"
+                    app:layout_column="4"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:text="Library"
+                    android:textSize="18dp"
+                    app:layout_column="5"
+                    app:layout_row="1"
+                    />
+
+                <TextView
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    app:layout_column="6"
+                    app:layout_row="1"
+                    />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
