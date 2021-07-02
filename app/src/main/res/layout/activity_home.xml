@@ -7,17 +7,55 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayoutHome"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollViewHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp"
+        >
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_everytime"
+            android:textColor="#79F31313"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:text="@string/home_kau"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="20dp"
+            android:layout_align="@id/textView2"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/imageButton"
+            app:srcCompat="@drawable/search" />
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollViewHome"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,145 +67,271 @@
             android:id="@+id/horizontalScrollContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="250dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal" />
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="320dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_border"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="5dp">
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="45dp"
+                            android:layout_marginTop="65dp"
+                            android:background="@drawable/btn_shape_1"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center"
+                            android:text="자세히 >"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            app:srcCompat="@drawable/home_bulb" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@id/imageView6"
+                            android:layout_marginStart="10dp"
+                            android:text="방학에 뭐하지?"
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textView3"
+                            android:layout_toEndOf="@id/imageView6"
+                            android:layout_marginStart="10dp"
+                            android:text="유익한 공모전, 대회활동 찾아보기"
+                            android:textColor="#FFC107" />
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="320dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_border"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="320dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_border"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
             </HorizontalScrollView>
 
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:orientation="horizontal"
                 app:columnCount="7"
-                app:rowCount="2" >
+                app:orientation="horizontal"
+                app:rowCount="2">
 
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="40dp"
                     android:layout_height="57dp"
                     app:layout_column="0"
-                    app:layout_row="0"
-                    />
-
-                <Button
-                    android:id="@+id/kauHome"
-                    android:layout_width="57dp"
-                    android:layout_height="61dp"
-                    android:text="KAU"
-                    app:layout_column="1"
                     app:layout_row="0" />
-                <Button
-                    android:id="@+id/kauStudy"
-                    android:layout_width="57dp"
-                    android:layout_height="57dp"
-                    android:text="Study"
-                    app:layout_column="2"
-                    app:layout_row="0"
-                    />
-                <Button
-                    android:id="@+id/kauNotice"
-                    android:layout_width="57dp"
-                    android:layout_height="57dp"
-                    android:text="Notice"
-                    app:layout_column="3"
-                    app:layout_row="0"
-                    />
-                <Button
-                    android:id="@+id/kauCalender"
-                    android:layout_width="57dp"
-                    android:layout_height="57dp"
-                    android:text="Cal"
-                    app:layout_column="4"
-                    app:layout_row="0"
-                    />
-
-                <Button
-                    android:id="@+id/kauLibrary"
-                    android:layout_width="57dp"
-                    android:layout_height="57dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Lib"
-                    app:layout_column="5"
-                    app:layout_row="0"
-                    />
 
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="40dp"
                     android:layout_height="57dp"
                     app:layout_column="6"
-                    app:layout_row="0"
-                    />
+                    app:layout_row="0" />
 
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="40dp"
                     android:layout_height="57dp"
                     app:layout_column="0"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="60dp"
                     android:layout_height="57dp"
-                    android:text="Homepage"
-                    android:textSize="19dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="학교\n홈"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     app:layout_column="1"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
                     android:layout_width="57dp"
                     android:layout_height="57dp"
-                    android:text="StudyRoom"
-                    android:textSize="19dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="열람실\n현황"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     app:layout_column="2"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
                     android:layout_width="57dp"
                     android:layout_height="57dp"
-                    android:text="Notice"
-                    android:textSize="19dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="학사\n공지"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     app:layout_column="3"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
                     android:layout_width="57dp"
                     android:layout_height="57dp"
-                    android:text="Calender"
-                    android:textSize="19dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="학사\n일정"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     app:layout_column="4"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
                     android:layout_width="57dp"
                     android:layout_height="57dp"
-                    android:text="Library"
-                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="도서관"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
                     app:layout_column="5"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
 
                 <TextView
-                    android:layout_width="57dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="57dp"
                     app:layout_column="6"
-                    app:layout_row="1"
-                    />
+                    app:layout_row="1" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_column="1"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/home"/>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_column="2"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/library" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_column="3"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/notice" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_column="4"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/calender" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_column="5"
+                    app:layout_row="0"
+                    app:srcCompat="@drawable/library" />
             </androidx.gridlayout.widget.GridLayout>
 
             <com.google.android.gms.ads.AdView
                 android:id="@+id/adView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/favorite_bulletin"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/custom_border"></LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popular_bulletin"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/custom_border"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toBottomOf="@id/favorite_bulletin"
+                app:layout_constraintBottom_toTopOf="@id/suggest_ad">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/suggest_ad"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintTop_ofBottomOf="@id/popular_bulletin" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_border">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="추천 정보"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:layout_width="411dp"
+                    android:layout_height="411dp"
+                    android:layout_marginTop="80dp" />
+            </FrameLayout>
 
         </LinearLayout>
 

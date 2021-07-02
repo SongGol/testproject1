@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">testproject1</string>
+    <string name="home_everytime">에브리타임</string>
+    <string name="home_kau">한국항공대</string>
 </resources>
