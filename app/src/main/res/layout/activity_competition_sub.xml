@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:layout_margin="3dp"
-            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:text="공모전,대외활동 제목.공모전,대외활동 제목."
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/black"
