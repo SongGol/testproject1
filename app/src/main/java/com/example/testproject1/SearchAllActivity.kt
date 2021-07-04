@@ -1,4 +1,11 @@
 package com.example.testproject1
 
-class SearchAllActivity {
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class SearchAllActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_search_all)
+    }
 }

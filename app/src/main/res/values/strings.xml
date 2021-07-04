@@ -2,4 +2,18 @@
     <string name="app_name">testproject1</string>
     <string name="home_everytime">에브리타임</string>
     <string name="home_kau">한국항공대</string>
+    <string name="favorite_bulletin">즐겨찾는 게시판</string>
+    <string name="favorite_bulletin_more">더 보기 ></string>
+    <string name="favorite_bulletin_name">게시판명</string>
+    <string name="favorite_bulletin_top_content">최상단 글 제목</string>
+    <string name="realtime_favorite">실시간 인기 글</string>
+    <string name="sub_title">게시글 제목</string>
+    <string name="sub_content">게시글 내용</string>
+    <string name="sub_writer">작성자</string>
+    <string name="sub_time">작성시간</string>
+    <string name="free_bulletin">자유게시판</string>
+    <string name="suggest_info">추천 정보</string>
+    <string name="popular_sub_bulletin_name">게시판명</string>
+    <string name="popular_sub_writer">익명</string>
+    <string name="popular_sub_written_date">작성일자</string>
 </resources>
