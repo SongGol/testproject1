@@ -34,7 +34,7 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/imageButton"
             android:layout_width="44dp"
             android:layout_height="45dp"
@@ -42,7 +42,7 @@
             android:layout_alignParentBottom="true"
             app:srcCompat="@drawable/profile" />
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/imageButton4"
             android:layout_width="44dp"
             android:layout_height="45dp"
@@ -50,7 +50,7 @@
             android:layout_align="@id/textView2"
             android:layout_alignParentBottom="true"
             android:layout_toStartOf="@+id/imageButton"
-            app:srcCompat="@drawable/search" />
+            app:srcCompat="@drawable/search"/>
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -87,17 +87,14 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="5dp">
 
-                        <Button
-                            android:id="@+id/button"
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/vacation_chip"
                             android:layout_width="wrap_content"
-                            android:layout_height="35dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_marginStart="45dp"
                             android:layout_marginTop="65dp"
-                            android:background="@drawable/btn_shape_1"
-                            android:backgroundTint="@color/white"
-                            android:gravity="center"
                             android:text="자세히 >"
                             android:textColor="@color/black" />
 
