@@ -313,14 +313,14 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
-                <include layout="@layout/activity_sub_favorite_bulletin"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
+                <include layout="@layout/activity_favorite_bulletin_sub"/>
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
