@@ -63,16 +63,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayoutHome">
 
-        <LinearLayout
-            android:id="@+id/horizontalScrollContainer"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nestedScrollContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollContainer"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:scrollbars="none">
+                android:scrollbars="none"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -150,29 +154,15 @@
             </HorizontalScrollView>
 
             <androidx.gridlayout.widget.GridLayout
-                android:layout_width="match_parent"
+                android:id="@+id/grid_menu"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:columnCount="7"
                 app:orientation="horizontal"
-                app:rowCount="2">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="57dp"
-                    app:layout_column="0"
-                    app:layout_row="0" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:layout_column="6"
-                    app:layout_row="0" />
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="57dp"
-                    app:layout_column="0"
-                    app:layout_row="1" />
+                app:rowCount="2"
+                app:layout_constraintTop_toBottomOf="@id/horizontalScrollContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:layout_width="60dp"
@@ -224,11 +214,7 @@
                     app:layout_column="5"
                     app:layout_row="1" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_column="6"
-                    app:layout_row="1" />
+
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -281,7 +267,10 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp"
                 ads:adSize="BANNER"
-                ads:adUnitId="myAdUnitId1"/>
+                ads:adUnitId="myAdUnitId1"
+                app:layout_constraintTop_toBottomOf="@id/grid_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <LinearLayout
                 android:id="@+id/favorite_bulletin"
@@ -292,7 +281,10 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical"
-                android:background="@drawable/custom_border">
+                android:background="@drawable/custom_border"
+                app:layout_constraintTop_toBottomOf="@id/adView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -338,7 +330,9 @@
                 android:orientation="vertical"
                 android:background="@drawable/custom_border"
                 android:layout_margin="5dp"
-                app:layout_constraintTop_toBottomOf="@id/favorite_bulletin" >
+                app:layout_constraintTop_toBottomOf="@id/favorite_bulletin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/textView9"
@@ -378,8 +372,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <FrameLayout
+                android:id="@+id/suggest_ad"
                 android:layout_width="match_parent"
-                android:layout_height="550dp">
+                android:layout_height="550dp"
+                app:layout_constraintTop_toBottomOf="@id/popular_bulletin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -408,8 +407,12 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/competition_bulletin_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/suggest_ad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -468,7 +471,7 @@
 
             </FrameLayout>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
