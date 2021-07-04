@@ -459,13 +459,13 @@
                         android:orientation="horizontal"
                         android:paddingTop="60dp">
 
-                        <include layout="@layout/competition_sub"
+                        <include layout="@layout/activity_competition_sub"
                             />
-                        <include layout="@layout/competition_sub" />
-                        <include layout="@layout/competition_sub" />
-                        <include layout="@layout/competition_sub" />
-                        <include layout="@layout/competition_sub" />
-                        <include layout="@layout/competition_sub" />
+                        <include layout="@layout/activity_competition_sub" />
+                        <include layout="@layout/activity_competition_sub" />
+                        <include layout="@layout/activity_competition_sub" />
+                        <include layout="@layout/activity_competition_sub" />
+                        <include layout="@layout/activity_competition_sub" />
                     </LinearLayout>
                 </HorizontalScrollView>
 
